@@ -1,0 +1,352 @@
+@charset 'UTF-8'
+
+
+/* 
+
+    noto sans korean: 한글
+     font-family: "Noto Sans KR", sans-serif;
+
+    noto sans: 영어
+     font-family: "Noto Sans", sans-serif;
+    
+    DM serif Display: gnb 메뉴
+     font-family: "DM Serif Display", serif;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+header {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: 303;
+
+}
+
+header {
+    /* display: none; */
+}
+
+header .header-inner {}
+
+
+header .header-inner>div {
+    margin: 0;
+    width: 15%;
+}
+
+#top_ban {
+    font-family: "Noto Sans", sans-serif;
+
+    position: relative;
+    z-index: 280;
+}
+
+#top_ban a {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+}
+
+#top_ban a:hover {
+    text-decoration: underline;
+}
+
+#top_ban>div {
+    text-align: center;
+
+}
+
+#top_ban>div:first-child a {
+    background-color: #000;
+}
+
+#top_ban>div:last-child a {
+    background-color: #F8F8F8;
+}
+
+#top_ban>div a {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.header-inner {
+    background: none;
+
+    padding: 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 280;
+    position: relative;
+    text-align: left;
+
+    box-sizing: border-box;
+
+}
+
+.header-inner:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+
+}
+
+.header-logo a .web-view {
+    display: block;
+}
+
+header .header-logo svg {
+    width: 54px;
+}
+
+header .header-inner>div.shop-nav {
+    width: 70%;
+    font-family: "DM Serif Display", serif;
+}
+
+header .header-inner>div.shop-nav>ul {
+    text-align: center;
+}
+
+header .header-inner>div.shop-nav>ul>li {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 24px;
+
+    display: inline-block;
+}
+
+header .header-nav.shop-nav>ul>li a {
+    color: #000;
+}
+
+header .header-nav.shop-nav>ul>li.rosepale a {
+    color: #F89CC2;
+}
+
+header .header-nav.member-nav>ul {
+    text-align: right;
+}
+
+header .header-nav.member-nav>ul>li {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin: 0 10px;
+}
+
+
+
+
+header .header-nav.member-nav svg {
+    height: 19px;
+    width: auto;
+}
+
+#hero_ban {
+    margin-top: 60px;
+}
+
+#hero_ban>div {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero_ban .column2 section {
+    width: 50%;
+}
+
+#hero_ban section {
+    position: relative;
+}
+
+#hero_ban section .banBox {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+}
+
+#hero_ban section .banBox h2 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 8px;
+}
+
+#hero_ban section .banBox h3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 12px;
+    color: #fff;
+    font-weight: 400;
+}
+
+#hero_ban section .banBox a {
+    margin: 0;
+    font-size: 13px;
+    text-decoration: underline;
+    line-height: 17px;
+    font-weight: 400;
+}
+
+#product_wrap {
+    margin: 0 0 50px;
+    height: 100%;
+}
+
+#product > ul {
+    padding: 10px 10px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+    font-size: ;
+}
+
+#product > ul.column4 > li {
+    flex: 0 0 calc(25% - 7.5px);
+    margin: 0 0 10px;
+
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#product .thumbnail li .thumbnail-image {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+#product .thumbnail li .thumbnail-image .pp {
+    width: 100%;
+    height: 100%;
+}
+
+#product .thumbnail li .thumbnail-image > a .pp > img {
+    opacity: 1;
+    transition: ease 0s;
+
+    max-width: 100%;
+    height: auto !important;
+
+}
+
+#product .thumbnail li .thumbnail-image > a .pp > img.second-img {
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    opacity: 0;
+    left: 0;
+    transition: ease 0.5s;
+
+
+}
+
+#product .thumbnail li:hover .thumbnail-image > a .pp > img.second-img {
+    opacity: 1;
+}
+
+
+#product .addtocart {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    margin: 0px 20px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 38px;
+    width: calc(100% - 40px);
+    overflow: hidden;
+    z-index: 9;
+    cursor: pointer;
+}
+
+#product .thumbnail li:hover .addtocart {
+    display: block;
+}
+
+#product .addtocart img {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100% !important;
+}
+
+#product .addtocart a {
+    color: #fff;
+}
+
+#product .thumbnail-info {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 10px 0 0;
+    position: relative;
+}
+
+#product .thumbnail-info p {
+    margin: 0;
+}
+
+#product .prd-note {
+    font-size: 13px;
+    color: #999;
+}
+
+#product .prd-volume {
+    font-size: 13px;
+    margin: 15px 0 0 !important;
+}
+
+
+
+
+
