@@ -234,7 +234,7 @@ header .header-nav.member-nav svg {
     height: 100%;
 }
 
-#product > ul {
+#product>ul {
     padding: 10px 10px 0;
     display: flex;
     gap: 10px;
@@ -244,7 +244,7 @@ header .header-nav.member-nav svg {
     font-size: ;
 }
 
-#product > ul.column4 > li {
+#product>ul.column4>li {
     flex: 0 0 calc(25% - 7.5px);
     margin: 0 0 10px;
 
@@ -265,7 +265,7 @@ header .header-nav.member-nav svg {
     height: 100%;
 }
 
-#product .thumbnail li .thumbnail-image > a .pp > img {
+#product .thumbnail li .thumbnail-image>a .pp>img {
     opacity: 1;
     transition: ease 0s;
 
@@ -274,7 +274,7 @@ header .header-nav.member-nav svg {
 
 }
 
-#product .thumbnail li .thumbnail-image > a .pp > img.second-img {
+#product .thumbnail li .thumbnail-image>a .pp>img.second-img {
 
     position: absolute;
     top: 0;
@@ -287,7 +287,7 @@ header .header-nav.member-nav svg {
 
 }
 
-#product .thumbnail li:hover .thumbnail-image > a .pp > img.second-img {
+#product .thumbnail li:hover .thumbnail-image>a .pp>img.second-img {
     opacity: 1;
 }
 
@@ -384,5 +384,76 @@ header .header-nav.member-nav svg {
     font-weight: 400;
 }
 
+#footer p{
+    margin: 0;
+}
 
 
+#footer .footer-wrap {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+
+#footer .footer-wrap > section {
+    flex: 0 0 25%;
+    border-right: 1px solid #eee;
+    font-size: 13px;
+    line-height: 23px;
+    padding: 20px 10px;
+
+    box-sizing: border-box;
+}
+
+#footer .footer-wrap>section p {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+#footer .footer-wrap > section p img {
+    margin: 0;
+    position: relative;
+    top: 3px;
+
+    max-width: 100%;
+    height: auto !important;
+}
+
+#footer .footer-wrap > section > p:first-child {
+    margin: 0 0 20px;
+}
+
+#footer .footer-wrap > section a {
+    color: #000;
+}
+
+#footer .footer-wrap > section:last-child {
+    border-right: 0;
+}
+
+#footer .footer-wrap > section .footer-box svg {
+    width: 12px;
+    position: relative;
+    top: 1px;
+}
+
+#footer .footer-company {
+    padding: 18px 10px 20px;
+    color: #999;
+}
+
+#footer .footer-company .footer-agree {
+    font-size: 11px;
+    line-height: 23px;
+}
+
+#footer .footer-company .footer-agree a {
+    color: #999;
+}
+
+#footer .footer-company section {
+    margin: 8px 0 0;
+    font-size: 11px;
+    line-height: 19px;
+}
