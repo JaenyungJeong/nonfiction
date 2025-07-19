@@ -1,5 +1,4 @@
-@charset 'UTF-8'
-
+@charset 'UTF-8';
 
 /* 
 
@@ -53,7 +52,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 303;
-
 }
 
 header {
@@ -62,7 +60,6 @@ header {
 
 header .header-inner {}
 
-
 header .header-inner>div {
     margin: 0;
     width: 15%;
@@ -70,7 +67,6 @@ header .header-inner>div {
 
 #top_ban {
     font-family: "Noto Sans", sans-serif;
-
     position: relative;
     z-index: 280;
 }
@@ -89,7 +85,6 @@ header .header-inner>div {
 
 #top_ban>div {
     text-align: center;
-
 }
 
 #top_ban>div:first-child a {
@@ -110,7 +105,6 @@ header .header-inner>div {
 
 .header-inner {
     background: none;
-
     padding: 13px 10px;
     display: flex;
     align-items: center;
@@ -119,15 +113,12 @@ header .header-inner>div {
     z-index: 280;
     position: relative;
     text-align: left;
-
     box-sizing: border-box;
-
 }
 
 .header-inner:hover {
     background-color: #fff;
     border-bottom: 1px solid #eee;
-
 }
 
 .header-logo a .web-view {
@@ -151,7 +142,6 @@ header .header-inner>div.shop-nav>ul>li {
     font-size: 18px;
     line-height: 20px;
     margin: 0 24px;
-
     display: inline-block;
 }
 
@@ -170,16 +160,16 @@ header .header-nav.member-nav>ul {
 header .header-nav.member-nav>ul>li {
     display: inline-block;
     vertical-align: middle;
-
     margin: 0 10px;
 }
-
-
-
 
 header .header-nav.member-nav svg {
     height: 19px;
     width: auto;
+}
+
+.mobileonly {
+    display: none;
 }
 
 #hero_ban {
@@ -239,15 +229,12 @@ header .header-nav.member-nav svg {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-
     box-sizing: border-box;
-    font-size: ;
 }
 
 #product>ul.column4>li {
     flex: 0 0 calc(25% - 7.5px);
     margin: 0 0 10px;
-
     display: inline-block;
     vertical-align: middle;
 }
@@ -257,7 +244,6 @@ header .header-nav.member-nav svg {
     aspect-ratio: 1/1;
     width: 100%;
     overflow: hidden;
-
 }
 
 #product .thumbnail li .thumbnail-image .pp {
@@ -268,14 +254,11 @@ header .header-nav.member-nav svg {
 #product .thumbnail li .thumbnail-image>a .pp>img {
     opacity: 1;
     transition: ease 0s;
-
     max-width: 100%;
     height: auto !important;
-
 }
 
 #product .thumbnail li .thumbnail-image>a .pp>img.second-img {
-
     position: absolute;
     top: 0;
     width: 100%;
@@ -283,14 +266,11 @@ header .header-nav.member-nav svg {
     opacity: 0;
     left: 0;
     transition: ease 0.5s;
-
-
 }
 
 #product .thumbnail li:hover .thumbnail-image>a .pp>img.second-img {
     opacity: 1;
 }
-
 
 #product .addtocart {
     display: none;
@@ -384,10 +364,9 @@ header .header-nav.member-nav svg {
     font-weight: 400;
 }
 
-#footer p{
+#footer p {
     margin: 0;
 }
-
 
 #footer .footer-wrap {
     border-top: 1px solid #eee;
@@ -395,13 +374,12 @@ header .header-nav.member-nav svg {
     display: flex;
 }
 
-#footer .footer-wrap > section {
+#footer .footer-wrap>section {
     flex: 0 0 25%;
     border-right: 1px solid #eee;
     font-size: 13px;
     line-height: 23px;
     padding: 20px 10px;
-
     box-sizing: border-box;
 }
 
@@ -411,28 +389,27 @@ header .header-nav.member-nav svg {
     align-items: baseline;
 }
 
-#footer .footer-wrap > section p img {
+#footer .footer-wrap>section p img {
     margin: 0;
     position: relative;
     top: 3px;
-
     max-width: 100%;
     height: auto !important;
 }
 
-#footer .footer-wrap > section > p:first-child {
+#footer .footer-wrap>section>p:first-child {
     margin: 0 0 20px;
 }
 
-#footer .footer-wrap > section a {
+#footer .footer-wrap>section a {
     color: #000;
 }
 
-#footer .footer-wrap > section:last-child {
+#footer .footer-wrap>section:last-child {
     border-right: 0;
 }
 
-#footer .footer-wrap > section .footer-box svg {
+#footer .footer-wrap>section .footer-box svg {
     width: 12px;
     position: relative;
     top: 1px;
@@ -456,4 +433,152 @@ header .header-nav.member-nav svg {
     margin: 8px 0 0;
     font-size: 11px;
     line-height: 19px;
+}
+
+.mob_view,
+.mobiledisplay {
+    display: none !important;
+}
+
+@media only screen and (device-width: 1440px),
+only screen and (max-width: 1440px),
+screen and (max-device-width: 1440px) {
+    header .header-inner>div {
+        width: 12%;
+    }
+}
+
+
+@media only screen and (device-width: 980px),
+only screen and (max-width: 980px),
+screen and (max-device-width: 980px) {
+
+    .mob_view,
+    .mobiledisplay {
+        display: block !important;
+    }
+
+    .web_view,
+    .mobiledisplaynone,
+    .mob_hide {
+        display: none !important;
+    }
+
+    #top_ban>div>a {
+        font-size: 11px;
+    }
+
+    header .header-inner {
+        height: 65px;
+    }
+
+    header .header-inner>div {
+        width: 33.33336%;
+    }
+
+    header .header-menu svg {
+        width: 16px;
+    }
+
+    header .header-logo {
+        text-align: center;
+    }
+
+    header .header-logo svg {
+        width: 72px;
+        margin: 0 auto;
+    }
+
+    header .header-inner>div.shop-nav {
+        display: none;
+    }
+
+    .home {
+        overflow-x: hidden;
+    }
+
+    .mobilenone {
+        display: none;
+    }
+
+    .mobileonly {
+        display: block;
+    }
+
+    .w-full {
+        width: 100%;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .object-contain {
+        object-fit: contain;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .mobile-home-cover .banBox {
+        position: absolute;
+        left: 15px;
+        bottom: 30px;
+    }
+
+    .mobile-home-cover .banBox h2 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0 0 8px;
+        color: #fff;
+    }
+
+    .mobile-home-cover .banBox h3 {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0 0 11px;
+        color: #fff;
+    }
+
+    .mobile-home-cover .banBox a {
+        display: inline-block;
+        font-size: 12px;
+        color: #fff;
+        line-height: 16px;
+        text-decoration: underline;
+    }
+
+    #product>ul {
+        padding: 30px 6px 0;
+        gap: 6px;
+    }
+
+    #product>ul.column4>li {
+        flex: calc(50% - 3px);
+    }
+
+    #footer .footer-wrap {
+        display: block;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    #footer .footer-wrap>section {
+        padding: 16px 10px;
+        border-bottom: 1px solid #eee;
+        border-right: 0;
+    }
+
+    #footer .footer-company {
+        padding: 18px 10px;
+    }
+
+    #footer .footer-company .footer-agree {
+        font-size: 11px;
+        line-height: 23px;
+    }
+
 }
