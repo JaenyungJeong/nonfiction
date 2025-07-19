@@ -132,21 +132,36 @@ header .header-logo svg {
 header .header-inner>div.shop-nav {
     width: 70%;
     font-family: "DM Serif Display", serif;
+    flex: 1;
+    min-width: 0; /* flex 아이템이 축소될 수 있도록 */
 }
 
 header .header-inner>div.shop-nav>ul {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 header .header-inner>div.shop-nav>ul>li {
     font-size: 18px;
     line-height: 20px;
-    margin: 0 24px;
-    display: inline-block;
+    margin: 0;
+    display: flex;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 header .header-nav.shop-nav>ul>li a {
     color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%;
 }
 
 header .header-nav.shop-nav>ul>li.rosepale a {
@@ -155,17 +170,26 @@ header .header-nav.shop-nav>ul>li.rosepale a {
 
 header .header-nav.member-nav>ul {
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 header .header-nav.member-nav>ul>li {
-    display: inline-block;
+    display: flex;
     vertical-align: middle;
-    margin: 0 10px;
+    margin: 0 5px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 header .header-nav.member-nav svg {
     height: 19px;
     width: auto;
+    flex-shrink: 0;
 }
 
 .mobileonly {
@@ -440,6 +464,45 @@ header .header-nav.member-nav svg {
     display: none !important;
 }
 
+/* 981px 이상에서 텍스트 줄바꿈 방지 및 공간 최적화 */
+@media screen and (min-width: 981px) {
+    header .header-inner {
+        gap: 20px; /* 로고와 네비게이션 사이 간격 */
+    }
+    
+    header .header-logo {
+        flex-shrink: 0; /* 로고 크기 고정 */
+    }
+    
+    header .header-inner>div.shop-nav {
+        flex: 1;
+        min-width: 0;
+        max-width: calc(100% - 200px); /* 로고와 멤버 네비게이션 공간 확보 */
+    }
+    
+    header .header-inner>div.shop-nav>ul {
+        justify-content: center;
+        gap: clamp(16px, 2vw, 24px); /* 반응형 간격 */
+    }
+    
+    header .header-inner>div.shop-nav>ul>li {
+        font-size: clamp(16px, 1.5vw, 18px); /* 반응형 폰트 크기 */
+    }
+    
+    header .header-inner>div.shop-nav>ul>li a {
+        white-space: nowrap;
+        word-break: keep-all;
+        word-wrap: normal;
+    }
+}
+
+/* 980px 이하에서 모바일 대응 */
+@media screen and (max-width: 980px) {
+    header .header-inner>div.shop-nav {
+        display: none;
+    }
+}
+
 @media only screen and (device-width: 1440px),
 only screen and (max-width: 1440px),
 screen and (max-device-width: 1440px) {
@@ -581,4 +644,31 @@ screen and (max-device-width: 980px) {
         line-height: 23px;
     }
 
+}
+
+/* 981px 이상에서 멤버 네비게이션 최적화 */
+@media screen and (min-width: 981px) {
+    header .header-nav.member-nav {
+        flex-shrink: 0; /* 멤버 네비게이션 크기 고정 */
+        min-width: 120px; /* 최소 너비 확보 */
+    }
+    
+    header .header-nav.member-nav>ul {
+        gap: clamp(8px, 1vw, 10px); /* 반응형 간격 */
+    }
+    
+    header .header-nav.member-nav>ul>li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    header .header-nav.member-nav>ul>li a {
+        white-space: nowrap;
+        word-break: keep-all;
+        word-wrap: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
 }
