@@ -501,10 +501,6 @@ header .header-nav.member-nav svg {
     header .header-inner>div.shop-nav {
         display: none;
     }
-
-    .home {
-        margin-top: 60px; /* 모바일에서도 동일한 여백 유지 */
-    }
 }
 
 @media only screen and (device-width: 1440px),
@@ -562,7 +558,7 @@ screen and (max-device-width: 980px) {
 
     .home {
         overflow-x: hidden;
-        margin-top: 60px;
+        padding-top: 60px;
     }
 
     .mobilenone {
@@ -675,5 +671,14 @@ screen and (max-device-width: 980px) {
         overflow: hidden;
         text-overflow: ellipsis;
         display: block;
+    }
+}
+
+@media only screen and (device-width: 480px),
+only screen and (max-width: 480px),
+screen and (max-device-width: 480px) {
+
+    #product>ul.column4>li {
+        flex: calc(100%);
     }
 }
