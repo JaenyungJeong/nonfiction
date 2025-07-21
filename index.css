@@ -674,9 +674,9 @@ screen and (max-device-width: 980px) {
     }
 }
 
-@media only screen and (device-width: 500px),
-only screen and (max-width: 500px),
-screen and (max-device-width: 500px) {
+@media only screen and (device-width: 480px),
+only screen and (max-width: 480px),
+screen and (max-device-width: 480px) {
 
     #product>ul.column4>li {
         flex: calc(100%);
